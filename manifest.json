@@ -1,0 +1,34 @@
+{
+   "background": {
+      "service_worker": "worker.js"
+   },
+   "content_scripts": [ {
+      "all_frames": true,
+      "js": [ "content.js" ],
+      "matches": [ "\u003Call_urls>" ]
+   } ],
+   "content_security_policy": {
+      "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+   },
+   "description": "Lightspeed Filter Agent for Chrome",
+   "externally_connectable": {
+      "ids": [ "adkcpkpghahmbopkjchobieckeoaoeem", "egnmgclkeiioginamdjpnglaooajmcjm" ]
+   },
+   "host_permissions": [ "\u003Call_urls>", "http://*/*", "https://*/*" ],
+   "icons": {
+      "128": "icon-128.png",
+      "16": "icon-16.png"
+   },
+   "incognito": "spanning",
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAvUV9d9zofzsgeqqdY7kRbcBvkwt3bFJRm3igUxWLgFv7M6IEkNlJ4d3aU4XaZm0J+V4zKnKl0/UNBwyQxCRX2FDEVbGedBAXd/6SflJhui8tHm/6sGeuh1or4dJIqGVylkRrkk3LEQM8HqsE43AVsDDOqOfzce67Gu3vhjvUkMxnBS5gtrG712bqhkjk59S+z+ObfzEO9FT7o6f9oX47+WeEvJLqzpP/6evFOHNnvYaMBdECpB2lprHLNaDEb+bDd+YmexWX+G45xqpu3lkWqImi/gL4bwgpk7WlSqI9KxMFyfuNiTuGw0r254VtNgz+b77F764Nt83JXoEncU0uwwIDAQAB",
+   "manifest_version": 3,
+   "name": "Lightspeed Filter Agent",
+   "options_page": "options.html",
+   "permissions": [ "webRequest", "idle", "background", "tabs", "storage", "history", "webRequestBlocking", "identity", "identity.email", "management", "enterprise.deviceAttributes", "enterprise.networkingAttributes", "proxy", "bookmarks" ],
+   "update_url": "https://lsrelay-extensions-production.s3.amazonaws.com/chrome-filter/1195737536466eab89b2b3121d146d454dfc08d6103d7487f470f35fc2302967/v3/ChromeFilter.xml",
+   "version": "4.2.0.1756885998",
+   "web_accessible_resources": [ {
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "blocked.png" ]
+   } ]
+}
